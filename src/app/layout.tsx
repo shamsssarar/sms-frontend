@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SMS",
-  description: "Education management platform",
+  title: "SMS | Education Management",
+  description:
+    "An education management platform for coaching centers, training institutes, schools, and universities.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
