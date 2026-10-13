@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SMS Frontend
 
-## Getting Started
+The frontend foundation for SMS, an education management platform built with
+Next.js App Router, React, TypeScript, Tailwind CSS v4, and shadcn/ui.
 
-First, run the development server:
+## Getting started
+
+Use Node.js and npm, then run:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project conventions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/` contains the App Router entry points and global styles.
+- `src/components/ui/` contains reusable shadcn/ui primitives.
+- `src/components/layout/` contains shared page shell and layout components.
+- `src/components/shared/` contains reusable UI that is not specific to a feature.
+- `src/features/` groups feature-specific components and logic.
+- `src/hooks/` contains reusable React hooks.
+- `src/lib/` contains small shared utilities.
+- `src/services/` is the boundary for future API and external service access.
+- `src/types/` contains shared TypeScript types.
+- `src/config/` contains application configuration, separate from UI.
+- `src/mocks/` contains development fixtures when needed.
 
-## Learn More
+Keep components as Server Components by default. Add a client boundary only when
+browser state or event handling requires it. Use the `@/*` alias for imports
+from `src/`. Tailwind v4 is configured through `src/app/globals.css`; there is
+no Tailwind v3 configuration file.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` starts the development server.
+- `npm run lint` runs ESLint.
+- `npm run typecheck` checks TypeScript without emitting files.
+- `npm run build` creates a production build.
+- `npm run start` serves the production build.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Current scope
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This repository contains only the frontend foundation and a neutral landing
+screen. Product pages and navigation await company-approved demo routes. There
+is no authentication, database, API, or backend functionality configured.
