@@ -1,16 +1,29 @@
-export default function Home() {
+import { GraduationCap } from "lucide-react";
+
+export default function HomePage() {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center px-6 py-16 sm:px-10">
-      <p className="text-sm font-medium tracking-wide text-muted-foreground">
-        SMS · Education management
-      </p>
-      <h1 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
-        Frontend foundation
+    <section className="mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center text-center">
+      <div className="mb-6 flex size-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+        <GraduationCap className="size-8" />
+      </div>
+
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        Welcome to SMS
       </h1>
-      <p className="mt-5 max-w-xl text-lg leading-8 text-muted-foreground">
-        The application foundation is ready. Product pages and navigation will
-        be added after the approved demo routes are provided.
+
+      <p className="mt-3 max-w-xl text-muted-foreground">
+        Your education management workspace. We are building the foundation for
+        managing your institution's academic and administrative operations.
       </p>
-    </main>
+
+      <div className="mt-8 w-full rounded-xl border border-border bg-card p-6 text-left">
+        <h2 className="font-semibold">Your workspace starts here</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          The application shell is ready for the next phase. Dashboard data and
+          individual feature pages will be implemented when their requirements
+          are defined.
+        </p>
+      </div>
+    </section>
   );
 }
