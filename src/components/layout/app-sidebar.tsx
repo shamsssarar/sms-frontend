@@ -32,7 +32,7 @@ const navigationGroups: {
   {
     label: "ACADEMIC",
     items: [
-      { label: "Students", icon: GraduationCap },
+      { label: "Students", icon: GraduationCap, href: "/students" },
       { label: "Teachers", icon: Users },
       { label: "Classes", icon: CalendarDays },
       { label: "Subjects", icon: BookOpen },
