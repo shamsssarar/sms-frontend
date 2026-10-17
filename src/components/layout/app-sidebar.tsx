@@ -27,7 +27,7 @@ const navigationGroups: {
 }[] = [
   {
     label: "WORKSPACE",
-    items: [{ label: "Dashboard", icon: LayoutDashboard, href: "/" }],
+    items: [{ label: "Dashboard", icon: LayoutDashboard, href: "/dashboard" }],
   },
   {
     label: "ACADEMIC",

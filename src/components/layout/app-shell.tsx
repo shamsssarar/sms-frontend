@@ -9,8 +9,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const pageTitle =
-    pathname === "/" || pathname === "/dashboard" ? "Dashboard" : "Workspace";
+  const pageTitle = pathname === "/dashboard" ? "Dashboard" : "Workspace";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
